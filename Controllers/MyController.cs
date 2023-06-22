@@ -18,13 +18,16 @@ namespace Session1_BoilerPlate.Controllers
         }
 
         [HttpGet]
-        public IActionResult Get()
+        public IActionResult GetValue()
         {
             try
             {
 
                 string value = _myInterface.GetMyValue();
-                return View(value);
+
+                ViewData["MyValue"] = value;
+
+                return View();
 
             }
             catch (Exception ex)

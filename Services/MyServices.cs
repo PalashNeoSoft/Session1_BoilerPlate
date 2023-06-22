@@ -16,8 +16,9 @@ namespace Session1_BoilerPlate.Services
 
         public string GetMyValue()
         {
-            string a = _configuration["Palash"];
-            return a;
+            string name = _configuration.GetValue<string>("MyData:Name");
+            
+            return name;
         }
 
 

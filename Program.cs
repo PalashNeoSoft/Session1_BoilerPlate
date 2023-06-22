@@ -31,7 +31,7 @@ namespace Session1_BoilerPlate
 
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=My}/{action=Index}/{id?}");
+                pattern: "{controller=My}/{action=GetValue}/{id?}");
 
             app.Run();
         }
